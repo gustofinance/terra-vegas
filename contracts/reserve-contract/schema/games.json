@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Games",
+  "type": "object",
+  "required": [
+    "games"
+  ],
+  "properties": {
+    "games": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

@@ -1,0 +1,184 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "QueryMsg",
+  "oneOf": [
+    {
+      "type": "object",
+      "required": [
+        "win_confficients"
+      ],
+      "properties": {
+        "win_confficients": {
+          "type": "object"
+        }
+      },
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "required": [
+        "player_rewards"
+      ],
+      "properties": {
+        "player_rewards": {
+          "type": "object",
+          "required": [
+            "addr"
+          ],
+          "properties": {
+            "addr": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "required": [
+        "current_round"
+      ],
+      "properties": {
+        "current_round": {
+          "type": "object"
+        }
+      },
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "required": [
+        "all_bets"
+      ],
+      "properties": {
+        "all_bets": {
+          "type": "object",
+          "properties": {
+            "last_evaluated_key": {
+              "type": [
+                "array",
+                "null"
+              ],
+              "items": [
+                {
+                  "type": "integer",
+                  "format": "uint64",
+                  "minimum": 0.0
+                },
+                {
+                  "type": "string"
+                }
+              ],
+              "maxItems": 2,
+              "minItems": 2
+            },
+            "page_size": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "format": "uint16",
+              "minimum": 0.0
+            }
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "required": [
+        "player_bets_for_round"
+      ],
+      "properties": {
+        "player_bets_for_round": {
+          "type": "object",
+          "required": [
+            "addr",
+            "round"
+          ],
+          "properties": {
+            "addr": {
+              "type": "string"
+            },
+            "round": {
+              "type": "integer",
+              "format": "uint64",
+              "minimum": 0.0
+            }
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "required": [
+        "player_bets_all_rounds"
+      ],
+      "properties": {
+        "player_bets_all_rounds": {
+          "type": "object",
+          "required": [
+            "addr"
+          ],
+          "properties": {
+            "addr": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "required": [
+        "outcome_history"
+      ],
+      "properties": {
+        "outcome_history": {
+          "type": "object"
+        }
+      },
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "required": [
+        "get_config"
+      ],
+      "properties": {
+        "get_config": {
+          "type": "object"
+        }
+      },
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "required": [
+        "get_betting_limit"
+      ],
+      "properties": {
+        "get_betting_limit": {
+          "type": "object"
+        }
+      },
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "required": [
+        "get_total_rewards"
+      ],
+      "properties": {
+        "get_total_rewards": {
+          "type": "object"
+        }
+      },
+      "additionalProperties": false
+    }
+  ]
+}

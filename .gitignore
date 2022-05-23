@@ -1,0 +1,11 @@
+.idea/**
+.idea
+testing
+target
+Cargo.lock
+artifacts
+
+/personal
+
+/*contract.txt
+/*code_id.txt

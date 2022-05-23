@@ -1,0 +1,196 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ExecuteMsg",
+  "oneOf": [
+    {
+      "type": "object",
+      "required": [
+        "change_adwantage_value"
+      ],
+      "properties": {
+        "change_adwantage_value": {
+          "type": "object",
+          "required": [
+            "advantage_value"
+          ],
+          "properties": {
+            "advantage_value": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "required": [
+        "change_win_tax"
+      ],
+      "properties": {
+        "change_win_tax": {
+          "type": "object",
+          "required": [
+            "win_tax"
+          ],
+          "properties": {
+            "win_tax": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "required": [
+        "change_max_number_of_bets"
+      ],
+      "properties": {
+        "change_max_number_of_bets": {
+          "type": "object",
+          "required": [
+            "number_of_bets"
+          ],
+          "properties": {
+            "number_of_bets": {
+              "type": "integer",
+              "format": "uint64",
+              "minimum": 0.0
+            }
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "required": [
+        "change_max_betting_ratio"
+      ],
+      "properties": {
+        "change_max_betting_ratio": {
+          "type": "object",
+          "required": [
+            "ratio"
+          ],
+          "properties": {
+            "ratio": {
+              "type": "integer",
+              "format": "uint64",
+              "minimum": 0.0
+            }
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "required": [
+        "change_round_duration"
+      ],
+      "properties": {
+        "change_round_duration": {
+          "type": "object",
+          "required": [
+            "duration"
+          ],
+          "properties": {
+            "duration": {
+              "type": "integer",
+              "format": "uint64",
+              "minimum": 0.0
+            }
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "required": [
+        "change_max_cashflow"
+      ],
+      "properties": {
+        "change_max_cashflow": {
+          "type": "object",
+          "required": [
+            "cashflow"
+          ],
+          "properties": {
+            "cashflow": {
+              "$ref": "#/definitions/Uint128"
+            }
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "required": [
+        "bet"
+      ],
+      "properties": {
+        "bet": {
+          "type": "object",
+          "required": [
+            "outcome"
+          ],
+          "properties": {
+            "outcome": {
+              "type": "integer",
+              "format": "uint8",
+              "minimum": 0.0
+            }
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "required": [
+        "receive_rewards"
+      ],
+      "properties": {
+        "receive_rewards": {
+          "type": "object"
+        }
+      },
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "required": [
+        "drain_game"
+      ],
+      "properties": {
+        "drain_game": {
+          "type": "object"
+        }
+      },
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "required": [
+        "stop_game"
+      ],
+      "properties": {
+        "stop_game": {
+          "type": "object"
+        }
+      },
+      "additionalProperties": false
+    }
+  ],
+  "definitions": {
+    "Uint128": {
+      "description": "A thin wrapper around u128 that is using strings for JSON encoding/decoding, such that the full u128 range can be used for clients that convert JSON numbers to floats, like JavaScript and jq.\n\n# Examples\n\nUse `from` to create instances of this and `u128` to get the value out:\n\n``` # use cosmwasm_std::Uint128; let a = Uint128::from(123u128); assert_eq!(a.u128(), 123);\n\nlet b = Uint128::from(42u64); assert_eq!(b.u128(), 42);\n\nlet c = Uint128::from(70u32); assert_eq!(c.u128(), 70); ```",
+      "type": "string"
+    }
+  }
+}
